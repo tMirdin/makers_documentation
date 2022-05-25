@@ -32,6 +32,11 @@ const Navbar = () => {
               </NavLink>
             </li>
             <li className="nav-item">
+              <NavLink className="nav-link" to="/topicCard">
+                Карточки
+              </NavLink>
+            </li>
+            <li className="nav-item">
               <a className="nav-link" href="#aboutUs">
                 О нас
               </a>

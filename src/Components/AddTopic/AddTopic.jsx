@@ -19,6 +19,10 @@ const AddTopic = () => {
       lib,
     };
     addTopics(newTopic);
+    setTitle("");
+    setDescription("");
+    setImage("");
+    setLib("");
   };
 
   return (

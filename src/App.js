@@ -1,5 +1,6 @@
 import React from "react";
 import Navbar from "./Components/Navbar/Navbar";
+import TopicDetails from "./Components/TopicDetails/TopicDetails";
 import TopicContextProvider from "./context/TopicContext";
 import MainRoutes from "./MainRoutes";
 
