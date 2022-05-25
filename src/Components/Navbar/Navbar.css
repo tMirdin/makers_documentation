@@ -1,0 +1,55 @@
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;500;700&family=Roboto+Flex:opsz,wght@8..144,300;8..144,400;8..144,500;8..144,700;8..144,800;8..144,900;8..144,1000&display=swap");
+
+* {
+  font-family: "Roboto Flex";
+}
+/* NAVBAR START */
+.container-fluid {
+  background-color: #001731;
+  /* background: rgb(21, 30, 126);
+  background: radial-gradient(
+    circle,
+    rgba(21, 30, 126, 1) 0%,
+    rgba(5, 7, 28, 1) 100% */
+  /* ); */
+}
+
+.navbar {
+  background-color: #001731;
+  /* background: rgb(21, 30, 126);
+  background: radial-gradient(
+    circle,
+    rgba(21, 30, 126, 1) 0%,
+    rgba(5, 7, 28, 1) 100%
+  ); */
+}
+
+#navbarLogo {
+  width: 50px;
+  height: 50px;
+  margin-left: 20px;
+}
+
+.navbar-nav {
+  margin-left: 50px;
+  font-size: 17px;
+  font-weight: 500;
+}
+
+.nav-link {
+  color: white !important;
+}
+
+.btn-outline-success {
+  font-size: 16px !important;
+  font-weight: 500 !important;
+  color: #fff !important;
+  border-color: white !important;
+  background-color: #001731;
+  border-radius: 5px;
+}
+
+/* NAVBAR FINISH */
+.active {
+  color: rgba(231, 248, 101, 0.509) !important;
+}
