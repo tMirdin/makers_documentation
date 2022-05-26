@@ -5,7 +5,8 @@ import { topicsContext } from "../../context/TopicContext";
 import "./TopicsList.css";
 
 const TopicsList = () => {
-  const { topicsArr, getTopics } = useContext(topicsContext);
+  const { topicsArr, getTopics, prevPage, nextPage } =
+    useContext(topicsContext);
 
   useEffect(() => {
     getTopics();
@@ -34,6 +35,8 @@ const TopicsList = () => {
           </div>
         </div>
       ))}
+      <Button onClick={() => prevPage()}>Назад</Button>
+      <Button onClick={() => nextPage()}>Вперед</Button>
     </div>
   );
 };

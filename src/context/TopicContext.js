@@ -23,6 +23,8 @@ const reducer = (prevState = INIT_STATE, action) => {
 
 // Хук useContext используется для создания общих данных, к которым можно обращаться из дочерних компонентов (не прописывая каждый раз props)
 
+let page = 1; // Переменная для пагинации
+
 const TopicContextProvider = ({ children }) => {
   // хук useReducer - принимает 2 аргумента: функцию reducer и начальное состояние. Затем хук возвращает массив из 2 элементов: текущее состояние и функцию dispatch. Dispatch (принимает в аргументы action) - функция, которая отправляет объект "action" для изменения состояния.
   const [state, dispatch] = useReducer(reducer, INIT_STATE);
@@ -35,7 +37,7 @@ const TopicContextProvider = ({ children }) => {
 
   // getTopics - Фуннкция для получения данных из БД db.json и сохранения этих данных в state "topics"
   const getTopics = async () => {
-    const { data } = await axios.get(API);
+    const { data } = await axios.get(`${API}?_page=${page}&_limit=3`);
     dispatch({
       type: "GET_TOPICS",
       payload: data,
@@ -52,6 +54,29 @@ const TopicContextProvider = ({ children }) => {
     });
   };
 
+  // deleteTopic - функция для удаления топика
+
+  const deleteTopic = async (id) => {
+    await axios.delete(`${API}/${id}`);
+  };
+
+  // editTopicFunc - функция для изменения данных нашей карточки
+
+  const editTopicFunc = async (id, editedTopic) => {
+    await axios.patch(`${API}/${id}`, editedTopic);
+  };
+
+  const prevPage = () => {
+    if (page <= 1) return;
+    page--;
+    getTopics();
+  };
+
+  const nextPage = () => {
+    page++;
+    getTopics();
+  };
+
   return (
     <topicsContext.Provider
       value={{
@@ -60,6 +85,10 @@ const TopicContextProvider = ({ children }) => {
         addTopics,
         getTopics,
         getTopicDetails,
+        deleteTopic,
+        editTopicFunc,
+        prevPage,
+        nextPage,
       }}
     >
       {children}
