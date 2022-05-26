@@ -1,4 +1,6 @@
 import React, { useContext, useEffect } from "react";
+import { Button } from "react-bootstrap";
+import { NavLink } from "react-router-dom";
 import { topicsContext } from "../../context/TopicContext";
 import "./TopicsList.css";
 
@@ -10,20 +12,24 @@ const TopicsList = () => {
   }, []);
 
   return (
-    <div>
+    <div className="container d-flex justify-content-evenly flex-wrap container-cards">
       {topicsArr.map((item) => (
-        <div className="container-cards">
-          <div className="card1" style={{ width: "18rem" }}>
-            <img src={item.image} className="card-img-top" alt={item.title} />
+        <div>
+          <div
+            className="card1 text-center m-4"
+            style={{ width: "18rem", height: "350px" }}
+          >
+            <img
+              src={item.image}
+              height="200"
+              className="card-img-top"
+              alt={item.title}
+            />
             <div className="card-body">
               <h5 className="card-title">{item.title}</h5>
-              <p className="card-text">
-                Some quick example text to build on the card title and make up
-                the bulk of the card's content.
-              </p>
-              <a href={item.lib} target="_blank" className="btn btn-primary">
-                {item.lib}
-              </a>
+              <NavLink to={`/details/${item.id}`}>
+                <Button>Просмотреть</Button>
+              </NavLink>
             </div>
           </div>
         </div>

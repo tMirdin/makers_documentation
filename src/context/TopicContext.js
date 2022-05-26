@@ -7,12 +7,15 @@ const API = "http://localhost:8000/topics";
 
 const INIT_STATE = {
   topics: [],
+  topicDetails: {},
 };
 
 const reducer = (prevState = INIT_STATE, action) => {
   switch (action.type) {
     case "GET_TOPICS":
       return { ...prevState, topics: action.payload };
+    case "GET_TOPIC_DETAILS":
+      return { ...prevState, topicDetails: action.payload };
     default:
       return prevState;
   }
@@ -39,9 +42,25 @@ const TopicContextProvider = ({ children }) => {
     });
   };
 
+  // getTopicDetails - функция которя стягивает данные из общего массива "topics" внутри БД db.json. Стягивает только один объект, на который мы нажимаем
+
+  const getTopicDetails = async (id) => {
+    const { data } = await axios.get(`${API}/${id}`);
+    dispatch({
+      type: "GET_TOPIC_DETAILS",
+      payload: data,
+    });
+  };
+
   return (
     <topicsContext.Provider
-      value={{ topicsArr: state.topics, addTopics, getTopics }}
+      value={{
+        topicsArr: state.topics,
+        detailsObj: state.topicDetails,
+        addTopics,
+        getTopics,
+        getTopicDetails,
+      }}
     >
       {children}
     </topicsContext.Provider>
