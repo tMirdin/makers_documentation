@@ -1,32 +1,110 @@
 {
   "topics": [
     {
-      "title": "ghjghj",
-      "description": "dsd",
-      "image": "ddsd",
-      "lib": "ssdsd",
+      "title": "HTML",
+      "description": "Cтандартизированный язык разметки документов для просмотра веб-страниц в браузере. Веб-браузеры получают HTML документ от сервера по протоколам HTTP/HTTPS или открывают с локального диска, далее интерпретируют код в интерфейс, который будет отображаться на экране монитора.",
+      "image": "https://itproger.com/img/courses/1476977240.jpg",
+      "lib": "https://ru.wikipedia.org/wiki/HTML",
       "id": 1
     },
     {
-      "title": "html",
-      "description": "fddfgdfgdfg",
-      "image": "hjhjhkjhj",
-      "lib": "hjkhkjhjh",
+      "title": "CSS",
+      "description": "Формальный язык описания внешнего вида документа (веб-страницы), написанного с использованием языка разметки (чаще всего HTML или XHTML). ",
+      "image": "http://toplogos.ru/images/logo-css3.png",
+      "lib": "https://ru.wikipedia.org/wiki/CSS",
       "id": 2
     },
     {
-      "title": "hjk",
-      "description": "hjk",
-      "image": "hjkh",
-      "lib": "jkhj",
+      "title": "FLEXBOX",
+      "description": " Это технология для создания сложных гибких макетов за счёт правильного размещения элементов на странице.",
+      "image": "https://wordpress-developer.pp.ua/wp-content/uploads/flexbox-css.png",
+      "lib": "https://tproger.ru/translations/how-css-flexbox-works/",
       "id": 3
     },
     {
-      "title": "HTML",
-      "description": "HTML — стандартизированный язык разметки документов для просмотра веб-страниц в браузере. Веб-браузеры получают HTML документ от сервера по протоколам HTTP/HTTPS или открывают с локального диска, далее интерпретируют код в интерфейс, который будет отображаться на экране монитора.",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/HTML5_logo_and_wordmark.svg/1200px-HTML5_logo_and_wordmark.svg.png",
-      "lib": "https://ru.wikipedia.org/wiki/HTML",
+      "title": "БЭМ",
+      "description": "БЭМ-сущность, определяющая внешний вид, состояние и поведение блока или элемента. Использование модификаторов опционально, количество — неограничено.",
+      "image": "https://ru.bem.info/kFetIbKxQdABHhUecbic45Il0Bg.png",
+      "lib": "https://ru.bem.info/methodology/quick-start/",
       "id": 4
+    },
+    {
+      "title": "ЛОГИЧЕСКИЕ ОПЕРАТОРЫ",
+      "description": "В JavaScript есть четыре логических оператора: || (ИЛИ), && (И) и ! (НЕ), ?? (Оператор нулевого слияния). ",
+      "image": "https://www.w3resource.com/w3r_images/ruby-and-operator.gif",
+      "lib": "https://learn.javascript.ru/logical-operators",
+      "id": 5
+    },
+    {
+      "title": "УСЛОВНЫЕ ОПЕРАТОРЫ",
+      "description": "Тернарный оператор – оператор JavaScript, который можно использовать, когда необходимо в зависимости от условия выполнить одно из двух заданных выражений.",
+      "image": "http://learn.javascript.ru/task/check-standard/ifelse_task2.png",
+      "lib": "https://itchief.ru/javascript/%D1%81onditional-and-logical-operators",
+      "id": 6
+    },
+    {
+      "title": "МЕТОДЫ МАССИВА",
+      "description": "Методы массивов часто дают разработчику удобные инструменты, позволяющие красиво решать самые разные задачи по преобразованию данных.",
+      "image": "https://bestprogrammer.ru/wp-content/uploads/2021/04/Metody-massiva-JavaScript.jpg",
+      "lib": "https://medium.com/webbdev/js-5e1519c6fb07",
+      "id": 7
+    },
+    {
+      "title": "ЦИКЛЫ",
+      "description": "Предназначенная для организации многократного исполнения набора инструкций. Также циклом может называться любая многократно исполняемая последовательность инструкций, организованная любым способом (например, с помощью условного перехода).",
+      "image": "https://moneymakerfactory.ru/Pics/nodecrp/481_6img_n.png",
+      "lib": "https://ru.wikipedia.org/wiki/%D0%A6%D0%B8%D0%BA%D0%BB_(%D0%BF%D1%80%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D0%BC%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5)",
+      "id": 8
+    },
+    {
+      "title": "ФУНКЦИИ",
+      "description": "Любая функция это объект, и следовательно ею можно манипулировать как объектом, в частности: передавать как аргумент и возвращать в качестве результата при вызове других функций (функций высшего порядка); создавать анонимно и присваивать в качестве значений переменных или свойств объектов.",
+      "image": "https://html-plus.in.ua/wp-content/uploads/2016/04/JavaScript-function.jpg",
+      "lib": "https://developer.mozilla.org/ru/docs/Web/JavaScript/Guide/Functions",
+      "id": 9
+    },
+    {
+      "title": "ДЕСТРУКТУРИЗАЦИЯ",
+      "description": "Деструктурирующее присваивание – это специальный синтаксис, который позволяет нам «распаковать» массивы или объекты в кучу переменных, так как иногда они более удобны. Деструктуризация также прекрасно работает со сложными функциями, которые имеют много параметров, значений по умолчанию и так далее.",
+
+      "image": "https://media.proglib.io/wp-uploads/2019/03/1_zDY1styY9gAbl9DEeAS6DA-e1552034333145.jpeg",
+      "lib": "https://learn.javascript.ru/destructuring-assignment",
+      "id": 10
+    },
+    {
+      "title": "GIT",
+      "description": "Git — абсолютный лидер по популярности среди современных систем управления версиями.",
+      "image": "https://techrocks.ru/wp-content/uploads/2019/04/59efwakoatqloh2tfq5j.png",
+      "lib": "https://www.atlassian.com/ru/git/tutorials/what-is-git",
+      "id": 11
+    },
+    {
+      "title": "GitHub",
+      "description": "GitHub — крупнейший веб-сервис для хостинга IT-проектов и их совместной разработки.",
+      "image": "https://github.com/opengraph.png",
+      "lib": "https://ru.wikipedia.org/wiki/GitHub",
+      "id": 12
+    },
+    {
+      "title": "DOM",
+      "description": "В соответствии с объектной моделью документа («Document Object Model», коротко DOM), каждый HTML-тег является объектом. Вложенные теги являются «детьми» родительского элемента. Текст, который находится внутри тега, также является объектом.",
+      "image": "https://www.freecodecamp.org/news/content/images/2021/09/Document.jpg",
+      "lib": "https://learn.javascript.ru/dom-nodes",
+      "id": 13
+    },
+    {
+      "title": "LOCAL STORAGE",
+      "description": "Объекты веб-хранилища localStorage и sessionStorage позволяют хранить пары ключ/значение в браузере.Что в них важно – данные, которые в них записаны, сохраняются после обновления страницы (в случае sessionStorage) и даже после перезапуска браузера (при использовании localStorage).",
+      "image": "https://res.cloudinary.com/de4rvmslk/image/upload/f_auto,q_auto//img/LocalStorage-cover_photo.png",
+      "lib": "https://learn.javascript.ru/localstorage",
+      "id": 14
+    },
+    {
+      "title": "REACT",
+      "description": "JavaScript-библиотека для создания пользовательских интерфейсов",
+      "image": "https://ru.reactjs.org/logo-og.png",
+      "lib": "https://ru.reactjs.org/docs/introducing-jsx.html",
+      "id": 15
     }
   ]
 }
