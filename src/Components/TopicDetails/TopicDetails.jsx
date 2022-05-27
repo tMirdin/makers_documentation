@@ -14,31 +14,36 @@ const TopicDetails = () => {
   }, []);
 
   return (
-    <div className="container-details d-flex flex-wrap">
-      <div className="d-flex justify-content-between">
-        <div className="contImg">
+    <>
+      <div className="containerTopicDetails">
+        <div className="containerTopicDetailsLeft">
           <img id="imgCards" src={detailsObj.image} alt="img" />
         </div>
-
-        <p>{detailsObj.description}</p>
-        <p>Подробная информация по ссылке ниже</p>
-        <a target="_blank" href={detailsObj.lib}>
-          Ссылка
-        </a>
+        <div className="containerTopicDetailsRight">
+          <div className="contImg"></div>
+          <h3 className="topicDetailsH3">{detailsObj.title}</h3>
+          <p className="topicDetailsPT1">{detailsObj.description}</p>
+          <p className="topicDetailsPT">
+            Подробная информация по ссылке ниже ↓
+          </p>
+          <a id="topicBtn" target="_blank" href={detailsObj.lib}>
+            Ссылка
+          </a>
+        </div>
       </div>
-      <div>
+      <div className="topicDetailsButtons">
         <NavLink to={`/edit/${id}`}>
           <button className="btnCrud" id="edit">
-            Изменить
+            ✎
           </button>
         </NavLink>
         <NavLink to="/topicCard">
           <button className="btnCrud" id="del" onClick={() => deleteTopic(id)}>
-            Удалить
+            🗑
           </button>
         </NavLink>
       </div>
-    </div>
+    </>
   );
 };
 

@@ -1,9 +1,18 @@
-import React from "react";
+import React, { useContext, useEffect } from "react";
 import { NavLink } from "react-router-dom";
 import logo from "../../assets/image/Logo.png";
+import { topicsContext } from "../../context/TopicContext";
 import "./Navbar.css";
 
 const Navbar = () => {
+  const { searchVal, setSearchVal, getTopics } = useContext(topicsContext);
+
+  useEffect(() => {
+    getTopics();
+    console.log("**********");
+    console.log("234234234");
+  }, [searchVal]);
+
   return (
     <nav className="navbar navbar-expand-lg">
       <div className="container-fluid">
@@ -55,6 +64,8 @@ const Navbar = () => {
               placeholder="Поиск..."
               aria-label="Search"
               id="inpSearch"
+              value={searchVal}
+              onChange={(e) => setSearchVal(e.target.value)}
             />
             <button className="btn-outline-success" type="submit">
               Поиск

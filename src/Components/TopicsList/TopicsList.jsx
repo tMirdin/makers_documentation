@@ -35,8 +35,10 @@ const TopicsList = () => {
           </div>
         </div>
       ))}
-      <Button onClick={() => prevPage()}>Назад</Button>
-      <Button onClick={() => nextPage()}>Вперед</Button>
+      <div>
+        <Button onClick={() => prevPage()}>Назад</Button>
+        <Button onClick={() => nextPage()}>Вперед</Button>
+      </div>
     </div>
   );
 };
